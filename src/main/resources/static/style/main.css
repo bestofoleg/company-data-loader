@@ -1,0 +1,14 @@
+.empty-blank {
+    height: 150px;
+}
+
+.around-area {
+    margin: 10px;
+}
+
+.logo {
+    font-size: 32px;
+    display: block;
+    text-align: center;
+    color: #3C9C69;
+}

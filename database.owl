@@ -1,0 +1,28 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#Other">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#INN">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#666">
+    <rdf:type rdf:resource="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#Other"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#555">
+    <rdf:type rdf:resource="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#INN"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#777">
+    <rdf:type rdf:resource="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#INN"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+</rdf:RDF>

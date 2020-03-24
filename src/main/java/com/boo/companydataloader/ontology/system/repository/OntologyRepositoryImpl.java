@@ -106,7 +106,7 @@ public class OntologyRepositoryImpl implements IOntologyRepository {
 
     @Override
     public Individual addIndividual(String ontClass, String ontResource) {
-        OntClass ontClassObject = ontModel.getOntClass(ontologyConnectionData.getOntologyPath() + ontClass);
+        OntClass ontClassObject = ontModel.getOntClass(ontologyConnectionData.getOntologyModelName() + ontClass);
 
         if (ontClassObject == null) {
             throw new RuntimeException("Super class has not founded!" +

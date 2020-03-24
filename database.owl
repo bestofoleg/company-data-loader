@@ -7,6 +7,9 @@
   <rdf:Description rdf:about="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#Other">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
+  <rdf:Description rdf:about="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs/7707083893">
+    <rdf:type rdf:resource="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#INN"/>
+  </rdf:Description>
   <rdf:Description rdf:about="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#INN">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>

@@ -22,12 +22,13 @@ public class CompanyService {
     @Autowired
     private DadataService dadataService;
 
-    public void addCompany(String inn) {
+    public Organization addCompany(String inn) {
         Flux<Suggestion<Organization>> organizationData = dadataService.getOrganizationByInn(inn);
         Organization organization = organizationData.blockFirst().getData();
         ontologyRepository.addIndividual(
                 EntitiesConstants.INN_CLASS_NAME,
                 organization.getInn()
         );
+        return organization;
     }
 }

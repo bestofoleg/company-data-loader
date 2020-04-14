@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.ArrayList;
 import java.util.Map;
 
 @Controller
@@ -25,7 +24,9 @@ public class PagesController {
     public String searchDataByInn(
             @RequestParam String inn,
             Map <String, Object> model) {
-        model.put("organizationData", organizationDataMineService.search(inn));
+        OrganizationData data = organizationDataMineService.search(inn);
+        System.out.println(data.toString());
+        model.put("organizationData", data);
         return "dataPage";
     }
 }

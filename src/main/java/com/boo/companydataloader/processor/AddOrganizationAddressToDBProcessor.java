@@ -4,6 +4,7 @@ import com.boo.companydataloader.dto.OrganizationData;
 import com.boo.companydataloader.ontology.system.repository.IOntologyRepository;
 import com.boo.companydataloader.service.RussianCharsetsCorrectorService;
 import com.boo.companydataloader.util.EntitiesConstants;
+import com.kuliginstepan.dadata.client.domain.address.Address;
 import com.kuliginstepan.dadata.client.domain.organization.Organization;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -18,9 +19,13 @@ public class AddOrganizationAddressToDBProcessor implements IProcessor {
 
     @Override
     public Organization doAction(OrganizationData data, Organization organization) {
+        System.out.println("Address Processor started! Data will save = " + data.isNeedToBeSave());
         if (data.isNeedToBeSave()) {
+            Address addressObj = organization.getAddress().getData();
+            String russianLangAddress =
+                    addressObj.getCity()+"_"+addressObj.getStreet();
             String companyAddress =
-                    correctorService.correct(organization.getAddress().getData().toString());
+                    correctorService.correct(russianLangAddress);
             ontologyRepository.addIndividual(
                     EntitiesConstants.COMPANY_ADDRESS_CLASS_NAME,
                     companyAddress
@@ -32,6 +37,7 @@ public class AddOrganizationAddressToDBProcessor implements IProcessor {
                     companyAddress
             );
             ontologyRepository.saveOntology();
+            data.setAddress(companyAddress);
         }
         return organization;
     }

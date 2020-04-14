@@ -61,8 +61,12 @@ public class OrganizationData {
 
     @Override
     public String toString() {
-        return "InputOrganizationData{" +
-                "inn='" + inn + '\'' +
+        return "OrganizationData{" +
+                "isNeedToBeSave=" + isNeedToBeSave +
+                ", inn='" + inn + '\'' +
+                ", competitorNames=" + competitorNames +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
                 '}';
     }
 }

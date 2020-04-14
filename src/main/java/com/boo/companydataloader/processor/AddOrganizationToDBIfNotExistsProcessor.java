@@ -26,7 +26,7 @@ public class AddOrganizationToDBIfNotExistsProcessor implements IProcessor{
                         String.format(Queries.CHECK_INN_EXISTENCE, data.getInn())
                 );
         if (solutions.isEmpty()) {
-            companyService.addCompany(data.getInn());
+            organization = companyService.addCompany(data.getInn());
             data.setNeedToBeSave(true);
         } else {
             data.setNeedToBeSave(false);
@@ -45,6 +45,7 @@ public class AddOrganizationToDBIfNotExistsProcessor implements IProcessor{
             );
             data.setAddress(solutions.get(0).getLiteral("?INST").toString());
         }
+        System.out.println("Check existence processor. Data will save = " + data.isNeedToBeSave());
         return organization;
     }
 }

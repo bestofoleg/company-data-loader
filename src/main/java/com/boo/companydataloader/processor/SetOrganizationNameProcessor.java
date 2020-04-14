@@ -36,6 +36,7 @@ public class SetOrganizationNameProcessor implements IProcessor {
                     companyName
             );
             ontologyRepository.saveOntology();
+            data.setName(companyName);
         }
         return organization;
     }

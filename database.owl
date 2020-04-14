@@ -1,5 +1,6 @@
 <rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs/"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#"
@@ -7,25 +8,30 @@
   <rdf:Description rdf:about="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#Other">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
+  <rdf:Description rdf:about="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs/SBERBANK ROSSII">
+    <rdf:type rdf:resource="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#CompanyName"/>
+  </rdf:Description>
   <rdf:Description rdf:about="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs/7707083893">
     <rdf:type rdf:resource="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#INN"/>
+    <j.0:hasCompanyName rdf:resource="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs/SBERBANK ROSSII"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs/NETKR?KER">
+    <rdf:type rdf:resource="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#CompanyName"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#CompanyName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#INN">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
+  <rdf:Description rdf:about="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs/7713511177">
+    <j.0:hasCompanyName rdf:resource="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs/NETKR?KER"/>
+    <rdf:type rdf:resource="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#INN"/>
+  </rdf:Description>
   <rdf:Description rdf:about="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
   </rdf:Description>
-  <rdf:Description rdf:about="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#666">
-    <rdf:type rdf:resource="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#Other"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#555">
-    <rdf:type rdf:resource="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#INN"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#777">
-    <rdf:type rdf:resource="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#INN"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:Description rdf:about="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs/hasCompanyName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
 </rdf:RDF>

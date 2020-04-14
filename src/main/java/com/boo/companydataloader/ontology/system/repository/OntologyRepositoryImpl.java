@@ -110,7 +110,7 @@ public class OntologyRepositoryImpl implements IOntologyRepository {
 
         if (ontClassObject == null) {
             throw new RuntimeException("Super class has not founded!" +
-                    ontologyConnectionData.getOntologyPath() + ontClass);
+                    ontologyConnectionData.getOntologyModelName() + ontClass);
         }
 
         return ontModel.createIndividual(

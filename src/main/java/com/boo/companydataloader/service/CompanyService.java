@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 
+import java.io.UnsupportedEncodingException;
+
 @Service
 public class CompanyService {
     @Autowired
@@ -22,12 +24,10 @@ public class CompanyService {
 
     public void addCompany(String inn) {
         Flux<Suggestion<Organization>> organizationData = dadataService.getOrganizationByInn(inn);
+        Organization organization = organizationData.blockFirst().getData();
         ontologyRepository.addIndividual(
                 EntitiesConstants.INN_CLASS_NAME,
-                organizationData.blockFirst()
-                    .getData()
-                    .getInn()
+                organization.getInn()
         );
-        ontologyRepository.saveOntology();
     }
 }

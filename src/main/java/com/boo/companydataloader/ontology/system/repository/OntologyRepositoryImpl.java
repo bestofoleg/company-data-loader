@@ -64,17 +64,17 @@ public class OntologyRepositoryImpl implements IOntologyRepository {
             throw new RuntimeException("Connection is not set!");
 
         ObjectProperty property =
-                ontModel.createObjectProperty(ontologyConnectionData.getOntologyPath() + ontProperty);
+                ontModel.createObjectProperty(ontologyConnectionData.getOntologyModelName() + ontProperty);
 
         if (property == null)
             throw new RuntimeException("Can't create a property with name " + ontProperty + ". ");
 
-        Individual beginIndividual = ontModel.getIndividual(ontologyConnectionData.getOntologyPath() + begin);
+        Individual beginIndividual = ontModel.getIndividual(ontologyConnectionData.getOntologyModelName() + begin);
 
         if (beginIndividual == null)
             throw new IllegalArgumentException("Can't find begin parameter Individual with name = " + begin + ".");
 
-        Individual endIndividual = ontModel.getIndividual(ontologyConnectionData.getOntologyPath() + end);
+        Individual endIndividual = ontModel.getIndividual(ontologyConnectionData.getOntologyModelName() + end);
 
         if (endIndividual == null)
             throw new IllegalArgumentException("Can't find end parameter Individual with name = " + end + ".");
@@ -114,7 +114,7 @@ public class OntologyRepositoryImpl implements IOntologyRepository {
         }
 
         return ontModel.createIndividual(
-                ontologyConnectionData.getOntologyPath() + ontResource,
+                ontologyConnectionData.getOntologyModelName() + ontResource,
                 ontClassObject
         );
     }

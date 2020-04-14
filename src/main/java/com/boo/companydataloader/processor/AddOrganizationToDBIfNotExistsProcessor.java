@@ -28,8 +28,10 @@ public class AddOrganizationToDBIfNotExistsProcessor implements IProcessor{
         if (solutions.isEmpty()) {
             organization = companyService.addCompany(data.getInn());
             data.setNeedToBeSave(true);
+            System.out.println("Check exist processor. Data will selected from dadata!");
         } else {
             data.setNeedToBeSave(false);
+            System.out.println("Check exist processor. Data will selected from onto!");
             solutions = ontologyRepository.getResultSetByQuery(
                             String.format(
                                     Queries.SELECT_COMPANY_NAME_BY_INN,

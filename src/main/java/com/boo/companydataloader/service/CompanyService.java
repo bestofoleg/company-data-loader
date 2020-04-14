@@ -29,6 +29,7 @@ public class CompanyService {
                 EntitiesConstants.INN_CLASS_NAME,
                 organization.getInn()
         );
+        ontologyRepository.saveOntology();
         return organization;
     }
 }

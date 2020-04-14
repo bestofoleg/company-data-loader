@@ -21,9 +21,9 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#7713511177">
-    <hasCompanyAddress rdf:resource="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#Moskva_Kozhevnicheskaya"/>
-    <hasCompanyName rdf:resource="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#NETKREKER"/>
     <rdf:type rdf:resource="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#INN"/>
+    <hasCompanyName rdf:resource="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#NETKREKER"/>
+    <hasCompanyAddress rdf:resource="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#Moskva_Kozhevnicheskaya"/>
   </rdf:Description>
   <rdf:Description rdf:about="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#Moskva_Kozhevnicheskaya">
     <rdf:type rdf:resource="file://C:/Users/olega/Desktop/company-data-loader/database.owl/Orgs#CompanyAddress"/>

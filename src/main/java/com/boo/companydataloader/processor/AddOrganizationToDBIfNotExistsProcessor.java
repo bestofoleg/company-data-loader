@@ -31,21 +31,21 @@ public class AddOrganizationToDBIfNotExistsProcessor implements IProcessor{
             System.out.println("Check exist processor. Data will selected from dadata!");
         } else {
             data.setNeedToBeSave(false);
-            System.out.println("Check exist processor. Data will selected from onto!");
+                    System.out.println("Check exist processor. Data will selected from onto!");
             solutions = ontologyRepository.getResultSetByQuery(
-                            String.format(
-                                    Queries.SELECT_COMPANY_NAME_BY_INN,
-                                    data.getInn()
-                            )
-                        );
-            data.setName(solutions.get(0).getLiteral("?INST").getString());
+                    String.format(
+                            Queries.SELECT_COMPANY_NAME_BY_INN,
+                            data.getInn()
+                    )
+            );
+            data.setName(solutions.get(0).getResource("INST").getLocalName());
             solutions = ontologyRepository.getResultSetByQuery(
                     String.format(
                             Queries.SELECT_COMPANY_ADDRESS_BY_INN,
                             data.getInn()
                     )
             );
-            data.setAddress(solutions.get(0).getLiteral("?INST").toString());
+            data.setAddress(solutions.get(0).getResource("INST").getLocalName());
         }
         System.out.println("Check existence processor. Data will save = " + data.isNeedToBeSave());
         return organization;

@@ -12,8 +12,8 @@ public interface Queries {
             "SELECT ?INST WHERE { ?INST a boo:INN . FILTER (?INST = boo:%s) }";
 
     String SELECT_COMPANY_NAME_BY_INN = BASE_PREFIXES +
-            "SELECT ?INST WHERE { boo:INN boo:hasCompanyName ?INST }";
+            "SELECT ?INST WHERE { ?INST a boo:CompanyName . boo:%s boo:hasCompanyName ?INST}";
 
     String SELECT_COMPANY_ADDRESS_BY_INN = BASE_PREFIXES +
-            "SELECT ?INST WHERE { boo:INN boo:hasCompanyAddress ?INST }";
+            "SELECT ?INST WHERE { ?INST a boo:CompanyAddress . boo:%s boo:hasCompanyAddress ?INST}";
 }
